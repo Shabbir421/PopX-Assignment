@@ -1,0 +1,91 @@
+:root{
+  --bg1: #eef9f9;
+  --card-bg: #ffffff;
+  --muted: #8b95a0;
+  --purple: #6b2bff;
+  --purple-ghost: #f3ebff;
+  --yellow: #f2c94c;
+  --input-border: #e0e0e0;
+}
+
+/* basic reset */
+*{box-sizing:border-box}
+html,body,#root{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;}
+body{
+  background: linear-gradient(180deg,#e6faf7 0%, #f6fbfb 100%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+/* outer wrapper */
+.app-wrapper{width:100%;display:flex;align-items:center;justify-content:center}
+
+/* mobile card */
+.mobile-card{
+  width:360px;
+  min-height:720px;
+  background:var(--card-bg);
+  border:1px solid #eee;
+  border-radius:6px;
+  box-shadow:0 6px 20px rgba(20,20,20,0.04);
+  padding:22px;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+/* the yellow dots area used on welcome */
+.dots{position:absolute; top:18px; left:18px; width:180px; height:260px; pointer-events:none}
+.dot{
+  width:34px; height:34px; border-radius:50%; background:var(--yellow);
+  color:#fff; display:flex; align-items:center; justify-content:center;
+  font-weight:700; position:absolute; box-shadow:0 4px 10px rgba(0,0,0,0.06)
+}
+/* arranged diagonally to roughly match design */
+.dot-1{top:8px; left:90px}
+.dot-2{top:58px; left:62px}
+.dot-3{top:98px; left:76px}
+.dot-4{top:128px; left:110px}
+.dot-5{top:150px; left:128px}
+.dot-6{top:188px; left:148px}
+
+/* content sections */
+.content{margin-top:210px}
+h2{margin:0 0 8px; font-size:20px}
+.muted{color:var(--muted); font-size:13px; margin:0 0 14px}
+
+/* buttons */
+.btn{display:block;width:100%; padding:12px; border-radius:8px; border:none; font-weight:600; cursor:pointer;font-size:14px}
+.primary{background:var(--purple); color:white; margin-bottom:10px; box-shadow:0 8px 22px rgba(107,43,255,0.12)}
+.ghost{background:var(--purple-ghost); border:1px solid rgba(107,43,255,0.06); color:#4b2ddf}
+
+/* forms */
+.form-card{padding-top:20px}
+.label{font-size:12px; color:var(--purple); margin:12px 0 6px; display:block}
+.input{width:100%; padding:10px 12px; border:1px solid var(--input-border); border-radius:8px; background:#fafafa; font-size:14px}
+
+/* login button style */
+.form-submit{background:#bfc1c3; color:white; margin-top:12px}
+
+/* footer nav */
+.footer-nav{display:flex; align-items:center; justify-content:space-between; padding:8px 6px; border-top:1px dashed #f0f0f0; margin-top:8px}
+.icon-btn{background:transparent;border:none;cursor:pointer;padding:6px; display:flex;align-items:center}
+.page-indicator{font-size:14px;color:#666}
+
+/* account */
+.account-page h3{margin:0 0 12px}
+.profile{display:flex; align-items:center; gap:12px; padding:10px 0}
+.avatar{width:64px; height:64px; border-radius:50%; background:#efeef0; display:flex; align-items:center; justify-content:center; font-weight:700}
+.profile-info .name{font-weight:700}
+.profile-info .email{font-size:13px; color:#8f95a1}
+
+/* small helpers */
+.small-radio input{margin-right:6px}
+
+/* responsive tweak */
+@media (max-width:420px){
+  .mobile-card{width:340px}
+}
